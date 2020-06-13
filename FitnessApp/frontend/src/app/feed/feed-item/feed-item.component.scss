@@ -1,0 +1,15 @@
+.photo-card{
+    width: 400px;
+    /*max-width: 300px;*/
+    overflow: hidden;
+    background: var(--ion-color-primary-contrast);
+    margin: 30px 30px 30px 30px;
+  }
+
+.photo-card ion-img {
+  max-height: 532px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}

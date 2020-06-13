@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  URL: http://localhost:8100
+  JWT_SECRET: tinnybinny
+  AWS_PROFILE: default
+  POSTGRESS_DATABASE: udagramtinnydev
+  POSTGRESS_HOST: udagramtinnydev.cz0muk1xwun8.ap-south-1.rds.amazonaws.com
+metadata:
+  name: env-config

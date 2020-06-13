@@ -1,0 +1,38 @@
+<form [formGroup]="uploadForm" (submit)="onSubmit($event)">`
+    <ion-item>
+      <ion-label position="floating" color="primary">Date</ion-label>
+      <ion-input type="date" formControlName="date" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Height (in cms)</ion-label>
+      <ion-input type="text" formControlName="height" required maxlength="3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Weight (in kgs)</ion-label>
+      <ion-input type="text" formControlName="weight" required maxlength="3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Water Intake in a day (glasses)</ion-label>
+      <ion-input type="text" formControlName="waterIntake" maxlength="2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Workout duration (in mins)</ion-label>
+      <ion-input type="text" formControlName="workout" maxlength="3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Steps walked in a day</ion-label>
+      <ion-input type="text" formControlName="steps" maxlength="5"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Notes</ion-label>
+      <ion-input type="text" formControlName="notes" maxlength="120"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button float-end="true" style="padding-right: 20px"
+      color="primary"
+      type="submit"
+      [disabled]="!uploadForm.valid">
+      Post
+    </ion-button>
+</form>
+<br>

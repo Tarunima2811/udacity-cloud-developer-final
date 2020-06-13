@@ -1,0 +1,15 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: tarunima2811/fitnessapp-reverseproxy
+  backend_user:
+    build:
+      context: ../../user
+    image: tarunima2811/fitnessapp-restapi-user
+  frontend:
+    build:
+      context: ../../frontend
+    image: tarunima2811/fitnessapp-frontend:local
+
