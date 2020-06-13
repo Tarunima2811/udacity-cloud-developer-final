@@ -1,0 +1,27 @@
+<ion-card class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="margin: 30px 30px 30px 30px; width: 300px; height: 220px; background: var(--ion-color-primary-contrast);" *ngIf="diaryItem">
+  <ion-card-header>
+    <ion-card-subtitle>
+      <ion-label float-left=""><b>{{diaryItem.email.substr(0, diaryItem.email.lastIndexOf('@')).toUpperCase()}}</b></ion-label>
+      <ion-label float-right=""><b>{{diaryItem.recordDate}}</b></ion-label>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <hr style="width:50%;text-align:left;margin-left:0; color: #1e2023">
+  <ion-card-content class="row">
+    <ion-label float-left="">Height: {{diaryItem.height}}</ion-label>
+    <ion-label float-end="">Weight: {{diaryItem.height}}</ion-label>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-label float-left="">Water Intake: {{diaryItem.waterIntake}}</ion-label>
+    <ion-label float-end="">Workout: {{diaryItem.workout}}</ion-label>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-label float-left="">Steps: {{diaryItem.steps}}</ion-label>
+    <ion-label float-end="" style="color: red" *ngIf="diaryItem.steps < 5000">Get up & run</ion-label>
+    <ion-label float-end="" style="color: #ffce00" *ngIf="diaryItem.steps >= 5000 && diaryItem.steps < 8000 ">You can do better</ion-label>
+    <ion-label float-end="" style="color: green" *ngIf="diaryItem.steps >= 8000">Good Job</ion-label>
+  </ion-card-content>
+  <ion-card-content>
+    <ion-label float-left="">Notes: {{diaryItem.notes}}</ion-label>
+  </ion-card-content>
+  <hr style="width:50%;text-align:left;margin-left:0; color: #1e2023">
+</ion-card>
